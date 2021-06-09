@@ -1,0 +1,106 @@
+body {
+  background-image: url(../img/jimmytan.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#name {
+  font-family: Chivo;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 100px;
+  margin-bottom: -20px;
+  margin-left: 20px;
+}
+
+#name-description{
+  font-family: Chivo;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+/* nav bar color */
+nav {
+  background-color: transparent;
+}
+
+nav::after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+nav ul {
+  float: right;
+  list-style: none; /*delete the bullet point*/
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 40px;
+
+  font-family: Chivo;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+/*length of overline*/
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: grey;
+}
+
+nav a::before {
+  /*for the 'overline' */
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+
+  position: absolute;
+  top: -8px;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/*mobile devices*/
+@media (max-width: 700px) {
+  #navbar{
+		display: none;
+	}
+
+	#hamburger-menu, #close-menu{
+		display: block;
+	}
+  body {
+      background-position: center;
+      background-size: contain;
+      background-repeat: round;
+  }
+
+  nav a {
+    color: black;
+  }
+}
+
+@media (min-width: 700px) {
+  #navbar{
+    display: block !important;
+  }
+
+  #hamburger-menu, #close-menu{
+    display: none !important;
+  }
+}
